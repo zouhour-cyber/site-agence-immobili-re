@@ -1,14 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 body{
     font-family: 'Lato', sans-serif;
     font-size:1.2rem;
+    margin:0;
+    background-color:rgba(205, 223, 216, 0.4);
+    
+
 }
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
 }
+
 
 .flex{
     display:flex;
@@ -17,24 +24,36 @@ body{
 
 /*.......style navbar......*/
 .navbar{
-    padding:2rem 3rem;
-    display: flex;
-    justify-items: center;
+    padding:1rem 3rem;
+    width:100%;
     font-size:1.2rem;
-    color:white;
+    color:black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color:rgba(34, 33, 33, 0.4);
+    display: flex;
+    justify-content: space-between;
+    top:0;
+    position: fixed;
+    margin-bottom: 0px;
+    z-index:10;
+
 }
 
 
 nav a{
     padding: 0.5rem 1rem;
     font-weight: bold;
-    color:white;
+    color:black;
+    display:inline;
+    
+   
 
 }
 nav a:hover{
     font-weight: bolder;
-    border-bottom:2px solid rgb(27, 26, 26);
+    border-bottom:2px solid rgb(38, 155, 129);
     text-shadow: 1px solid rgb(27, 26, 26);
+    color: rgb(38, 155, 129);
 
 }
 
@@ -44,7 +63,7 @@ a{
 
 #logo{
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-style: italic;
     text-shadow: 2px;
     color:white;
@@ -55,7 +74,8 @@ a{
    
  /*........ style banière..........*/   
 .banner{
-height:35rem;
+margin-top: -3em;
+height: 30em;
 background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('image/francesca-tosolini-D7a8yW1MxQM-unsplash.jpg'); 
 background-repeat: no-repeat;
 background-size: cover;
@@ -68,15 +88,18 @@ background-position: center;
 .content{
  
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 0em;
+    padding-top: 10em;
 }
 .content h1{
     font-size: 4rem;
     font-style: italic;
-    margin-bottom: 4rem;
+    margin: 4rem;
     text-shadow:1px 2px;
     color:white;
 }
+
+
 /*.......style du formulaire...*/
 input,select{
     padding:1rem 3rem;
@@ -100,15 +123,16 @@ input[type=button]:hover{
     padding:2rem 0rem;
     margin:1rem 4rem;
 }
-/*.....categories ..*/
+/*............categories ...........*/
 main{
     text-align: center;
 }
 .subtitle{
-    margin: 4rem;
+    margin: 5rem 0rem;
     font-weight: bolder;
     font-size: 2rem;
     text-align: center;
+    font-style: italic;
 }
 
 .card {
@@ -140,6 +164,7 @@ main{
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     color:rgb(236, 222, 222);
+    padding:1rem;
   }
 
 .slide-item{
@@ -176,7 +201,7 @@ main{
     margin-top:2rem;
 }
 
-
+/*....tetiimonials....*/
 .clients{
     margin:1rem 3rem;
     padding:4rem 4rem;
@@ -186,7 +211,7 @@ main{
     border-radius: 2rem;
     position:relative;
     padding: 2rem;
-    
+    background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
     
@@ -212,35 +237,180 @@ main{
     grid-template-columns: auto auto auto;
   }
 
-  footer{
-      margin-top:6rem;
-      padding:3rem;
-      font-size: 1rem;
-      list-style-type: none;
-      color:white;
-      background-color: rgb(105, 138, 113);
+  
+  
+
+  .Advantage{
+    padding: 4rem 1rem;
+    text-align: center;
+ 
+  }
+  .Advantage h4{
+      margin-bottom: 2rem;
+   
+  }
+.icon{
+   
+    position:absolute;
+    top:-4rem;
+    background-color: rgb(91, 196, 178);
+    padding: 2rem 2rem;
+    width: 6rem;
+    height:6rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.content2{
+    margin:1rem 4rem;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:1rem;
+}
+
+.contenu{
+    margin:3rem 0rem ;
+    padding:1rem;
+    background-color: rgb(32, 34, 34);
+  
+}
+.contenu .subtitle{
+    color:white;
+}
+.cardadv{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    position:relative;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 243, 236);
+
+  }
+  .cardadv:hover{
+      transform: translateY(-10px);
   }
 
-  footer a{
-      color:white;
-  }
-  footer a:hover{
-    font-weight: bolder;
-    border-bottom:2px solid rgb(27, 26, 26);
-    text-shadow: 1px solid rgb(27, 26, 26);
+
+
+/*.....footer...*/
+  footer{
+    padding-left:10rem;
+    margin-top:10rem;
+    padding:3rem;
+    font-size: 1.2rem;
+    list-style-type: none;
+    color:white;
+    background-color: rgb(105, 138, 113);
+}
+
+footer a{
+    color:white;
+}
+footer a:hover{
+  font-weight: bolder;
+  border-bottom:2px solid rgb(27, 26, 26);
+  text-shadow: 1px solid rgb(27, 26, 26);
 
 }
-  footer .newsletter input[type="e-mail"]{
-      background-color: transparent;
-      outline: none;
-      border:none;
-      border-bottom: 1px solid black;
-      color:white;
-  }
-  
-  footer .usefulslinks h4{
-      border-bottom: 2px solid rgba(0,0,0,0.5);
-      
+footer .newsletter input[type="e-mail"]{
+    margin-top: 2rem;
+    background-color:rgba(32, 34, 34, 0.3);
+    outline: none;
+    border-bottom: 1px solid black;
+    color:black;
+}
 
+
+
+footer button{
+    background-color: black;
+    padding: 1rem;
+    border-radius: 0 1rem 1rem 0rem;
+    
+}
+footer i{
+    color:white;
+}
+
+
+ /*........  page Rent style banière..........*/   
+ .banière{
+    margin-top: -3em;
+    height: 18em;
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('image/florian-schmidinger-b_79nOqf95I-unsplash.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+    }
+
+    .content h2{
+        font-size: 2rem;
+        font-style: italic;
+        margin-bottom: 3rem;
+        color:white;
+    }
+
+    .début{
+    padding-bottom: 1rem;
+    border-bottom:3px solid rgb(38, 155, 129);
+    color:rgb(38, 155, 129);
+    width:1px;
+    }
+
+    .main{
+        margin:6rem 5rem;
+    }
+
+    .card2 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+       
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        
+      }
+      .card2 img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        height:100%;
+        margin: auto;
+        filter: brightness(60%);
+        transform: scale(1.05);
+      }
+      
+      .price {
+        color: grey;
+        font-size: 22px;
+      }
+      
+      .card2 button {
+        margin-top: 2rem;
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+      
+      .card2 button:hover {
+        border:2px solid black;
+        background-color: rgb(194, 226, 219);
+        color:black;
+      
+      }
+  .products{
+    margin:2rem 4rem;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
   }
-  
